@@ -1,8 +1,8 @@
 <template>
   <form @submit.prevent="handleSubmit">
     <div class="input-block">
-      <label for="github_user">Usuário do Github</label>
-      <input v-model="github_user" id="github_user" type="text" name="github_user" required />
+      <label for="github_username">Usuário do Github</label>
+      <input v-model="github_username" id="github_username" type="text" name="github_username" required />
     </div>
 
     <div class="input-block">
@@ -36,7 +36,7 @@ export default {
   },
   data() {
     return {
-      github_user: '',
+      github_username: '',
       techs: [],
       latitude: '',
       longitude: '',
@@ -48,14 +48,14 @@ export default {
   methods: {
     async handleSubmit() {
       const formData = {
-        github_user: this.github_user,
+        github_username: this.github_username,
         techs: this.techs,
         latitude: this.latitude,
         longitude: this.longitude,
       };
 
       await this.onSubmit(formData);
-      this.github_user = '';
+      this.github_username = '';
       this.techs = [];
     },
     getGeoLocation() {

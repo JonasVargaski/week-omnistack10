@@ -66,7 +66,7 @@ export default {
 body,
 input,
 button {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 html,
